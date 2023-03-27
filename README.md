@@ -1,24 +1,19 @@
-# README
+# superheroes code challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API for superhero abilities.
 
-Things you may want to cover:
+TEST URI: http://localhost:3000/<endpoint>
 
-* Ruby version
+|Prefix     |  Verb |  endpoints   |   Controller#Action |
+| -------   | ------| -------      |    -------          |
+|powers     | GET   |  /powers     |  powers#index       |
+|powers     | GET   |  /powers/:id |  powers#show        |
+|powers     | PATCH |  /powers/:id |  powers#update      |
+|heroes     | GET   |  /heroes     |  heroes#index       |
+|hero       | GET   |  /heroes/:id |  heroes#show        |
+|hero_powers| POST  |  /hero_powers|  hero_powers#create |
 
-* System dependencies
+## Setup env and start server
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundler install && rails db:migrate && rails db:seed && rails s -b 0.0.0.0
