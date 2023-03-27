@@ -9,19 +9,19 @@ class PowersController < ApplicationController
     end
 
     def show
-        power = find_power
+        power = find_power(params)
         render json: power, serializer: PowerSerializer
     end
 
     def update
-        power = find_power
+        power = find_power(params)
         power.update!(permit_params(params))
         render json: power, serializer: PowerSerializer
     end
 
     private
 
-    def find_power
+    def find_power(params)
         Power.find(params[:id])
     end
 
