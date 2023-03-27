@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  resources :hero_powers
-  resources :powers
-  resources :heros
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # resources :hero_powers, only: :index
+  resources :powers, only: [:index, :show, :update]
+  resources :heroes, only: [:index, :show]
 end
